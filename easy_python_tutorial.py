@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.set_page_config(layout="wide")
+st.set_page_config(page_title="Gabo Loza Lucero Streamlit", layout="centered", initial_sidebar_state="auto")
 st.title('Easy tutorial for PYTHON BEGINNERS')
 
 st.write('Simple but effective tips for every python lovers')
