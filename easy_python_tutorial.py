@@ -19,7 +19,7 @@ outputWO = '''3'''
 st.code(outputWO, language='python')
 
 st.header('2. Splitting a string')
-st.text_area('If you want to split the components of a string into a list you can do that easily using the split() function in python. This will make the string operations a lot easier!')
+st.write('If you want to split the components of a string into a list you can do that easily using the split() function in python. This will make the string operations a lot easier!')
 
 st.subheader('Example')
 string_split = '''string = "hello world"
