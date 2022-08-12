@@ -10,8 +10,11 @@ st.text('The Walrus or := operator is one of the latest additions to python 3.8.
 st.text('lets you assign value to a variable within an expression like conditional statements, loops, etc.')
 
 st.subheader('Example')
-code = '''Mylist = [1,2,3]
-if(1 := len(Mylist > 2):
-    print(1)'''
-st.code(code, language='python')
+walrus_operator = '''Mylist = [1,2,3]
+if(list := len(Mylist > 2):
+    print(list)'''
+st.code(walrus_operator, language='python')
 
+st.subheader('Output')
+outputWO = '''3'''
+st.code(outputWO, language='python')
