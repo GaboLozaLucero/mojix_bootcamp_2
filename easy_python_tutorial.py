@@ -40,5 +40,33 @@ print(a)'''
 st.code(reversing, language='python')
 
 st.subheader('Output')
-outputR = '''['hello', 'world']'''
+outputR = '''dlrow olleh'''
 st.code(outputR, language='python')
+
+st.header('4. Merging two dictionaries')
+st.write('This amazing trick will help you merge two dictionaries with just 1 line of code. We just need to use ** in front of the name of the two dictionaries like below two merge them into a single dictionary:')
+
+st.subheader('Example')
+dictionaries = '''d1 = {“a”: 10, “b”:20}
+d2 = {“c”: 30, “d”:40}
+d3 = {**d1, **d2}
+print(d3)'''
+st.code(dictionaries, language='python')
+
+st.subheader('Output')
+outputD = '''{‘a’: 10, ‘b’: 20, ‘c’: 30, ‘d’: 40}'''
+st.code(outputD, language='python')
+
+st.header('4. The zip() function')
+st.write('The zip() function in python can make your life a lot easier when working with lists and dictionaries. It is used to combine several lists of the same length.')
+
+st.subheader('Example')
+zipFunction = '''colour = [“red”, “yellow”, “green”]
+fruits = [‘apple’, ‘banana’, ‘mango’]
+for colour, fruits in zip(colour, fruits):
+print(colour, fruits)'''
+st.code(zipFunction, language='python')
+
+st.subheader('Output')
+outputZF = '''{‘a’: 10, ‘b’: 20, ‘c’: 30, ‘d’: 40}'''
+st.code(outputZF, language='python')
