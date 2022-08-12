@@ -57,7 +57,7 @@ st.subheader('Output')
 outputD = '''{‘a’: 10, ‘b’: 20, ‘c’: 30, ‘d’: 40}'''
 st.code(outputD, language='python')
 
-st.header('4. The zip() function')
+st.header('5. The zip() function')
 st.write('The zip() function in python can make your life a lot easier when working with lists and dictionaries. It is used to combine several lists of the same length.')
 
 st.subheader('Example')
@@ -70,3 +70,30 @@ st.code(zipFunction, language='python')
 st.subheader('Output')
 outputZF = '''{‘a’: 10, ‘b’: 20, ‘c’: 30, ‘d’: 40}'''
 st.code(outputZF, language='python')
+
+st.write('The zip() function can also be used for combining two lists into a dictionary. This method can be really helpful while grouping data from the list.')
+st.subheader('Example')
+zipFunction1 = '''students = [“Rajesh”, “kumar”, “Kriti”]
+marks = [87, 90, 88]
+dictionary = dict(zip(students, marks))
+print(dictionary)'''
+st.code(zipFunction1, language='python')
+
+st.subheader('Output')
+outputZF1 = '''{‘Rajesh’: 87, ‘kumar’: 90, ‘Kriti’: 88}'''
+st.code(outputZF1, language='python')
+
+st.header('6. Assigning multiple list values to a variable')
+st.write('If you want to assign some specific values of a list to a variable and all the remaining values to another variable in a list format, you can use the following technique:')
+
+st.subheader('Example')
+value = '''mylist = [1,2,3,4,5]
+a,*b = mylist
+print(f”a =”,a)
+print(f”b =”,b)'''
+st.code(value, language='python')
+
+st.subheader('Output')
+outputV = '''a = 1
+b = [2, 3, 4, 5]'''
+st.code(outputV, language='python')
