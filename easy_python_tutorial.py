@@ -11,7 +11,7 @@ st.text('lets you assign value to a variable within an expression like condition
 
 code = '''Mylist = [1,2,3]
 if(1 := len(Mylist > 2):
-print(1)'''
+    print(1)'''
 st.code(code, language='python')
 
 col1, col2, col3 = st.columns(3)
