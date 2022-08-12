@@ -6,6 +6,7 @@ st.title('Easy tutorial for PYTHON BEGINNERS')
 st.write('Simple but effective tips for every python lovers')
 
 st.subheader('1. Walrus operator')
+st.text('The Walrus or := operator is one of the latest additions to python 3.8. It is an assignment operator that lets you assign value to a variable within an expression like conditional statements, loops, etc.')
 
 col1, col2, col3 = st.columns(3)
 
