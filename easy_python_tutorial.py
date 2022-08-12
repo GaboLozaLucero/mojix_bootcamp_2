@@ -97,3 +97,70 @@ st.subheader('Output')
 outputV = '''a = 1
 b = [2, 3, 4, 5]'''
 st.code(outputV, language='python')
+st.write('This process is also called list unpacking and you can apply this method for more than 2 variables also!')
+
+st.header('7. Remove duplicate list items')
+st.write('Do you have duplicate items in your list which you want to remove? You can do that with only one line of code using the set() function.')
+
+st.subheader('Example')
+double = '''mylist = [1,1,1,2,2,3,3,4,4,5,6,7,7,8,9]
+newlist = set(mylist)
+print(newlist)'''
+st.code(double, language='python')
+
+st.subheader('Output')
+outputD = '''{1, 2, 3, 4, 5, 6, 7, 8, 9}'''
+st.code(outputD, language='python')
+
+st.header('8. Lambda Function')
+st.write('If you need a function that is not very complicated, it can be done easily in one line using lambda. They are also called anonymous functions and are used heavily in data science and web development.')
+
+st.subheader('Example')
+st.write('Let’s say you want to write a function to multiply two numbers. Instead of writing a conventional function, you can do that in one line using :')
+lambdaF = '''mul = lambda a,b: a*b
+mul(5,6)'''
+st.code(lambdaF, language='python')
+
+st.subheader('Output')
+outputLF = '''30'''
+st.code(outputLF, language='python')
+
+st.header('9. Swapping variable value')
+st.write('One of the first programs that we learn while learning about variables is swapping the values of two variables. In python you can achieve that with one line of code:')
+
+st.subheader('Example')
+sqap = '''a = 100
+b = 200
+a,b = b,a
+print(f’a = ‘,a)
+print(f’b = ‘,b)'''
+st.code(sqap, language='python')
+
+st.subheader('Output')
+outputS = '''a = 200
+b = 100'''
+st.code(outputS, language='python')
+
+st.header('10. Use a passwoird in your code')
+st.write('This python trick is amazing for securing your code with a password. We will use the getpass() function from the library getpass which encodes your input. This will prevent anyone from running the code without a password. Isn’t that cool!')
+
+st.subheader('Example')
+password = '''from getpass import getpass
+password = getpass(“password: “)
+if password == “abcd”:
+    print(“welcome strnger!”)
+else:
+    print(“wrong password”)'''
+st.code(password, language='python')
+
+st.subheader('Output')
+outputP = '''password: **** [abcd]
+Welcome stranger!
+Password: **** [abdc]
+Wrong password'''
+st.code(outputP, language='python')
+
+st.header('Conclusion')
+st.write('These were a few amazing Python tips and tricks which will make your work a lot easier while coding. There are many more shortcuts like these that you can explore from the official documentation or any other website.')
+st.write('Note: This article contains an affiliate link. This means that if you click on it and choose to buy the resource I linked above, a small portion of your subscription fee will go to me.')
+st.write('However, the recommended resource is experienced by me and helped me in my data science career journey.')
