@@ -1,7 +1,9 @@
 import streamlit as st
 
 st.set_page_config(layout="wide")
-st.title('Easy tutorial for PYTHON BEGINNERS')
+st.title("Easy tutorial for PYTHON BEGINNERS")
+
+st.write("Simple but effective tips for every python lovers")
 
 col1, col2, col3 = st.columns(3)
 
