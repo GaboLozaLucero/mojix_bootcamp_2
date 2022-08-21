@@ -73,9 +73,10 @@ df_discrepancy["Unders"] = df_discrepancy["Unders"].fillna(0).astype(int)
 
 st.subheader('Now we check our new info')
 st.write('Product Level 1 Name:')
-df_product_lelve1_name = df_discrepancy.groupby("Retail_Product_Level1Name").sum()
-st.dataframe(df_product_lelve1_name)
-st.bar_chart(df_product_lelve1_name)
+df_size = df_discrepancy.groupby("Retail_Product_Size").sum()
+df_size.head()
+st.dataframe(df_size)
+st.bar_chart(df_size)
 
 
 
