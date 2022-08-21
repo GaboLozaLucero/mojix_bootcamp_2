@@ -79,7 +79,7 @@ df_discrepancy["Unders"] = df_discrepancy["Unders"].fillna(0).astype(int)
 positives = '''df_discrepancy.loc[df_discrepancy["Diff"]<0, "Unders"] = df_discrepancy["Diff"] * (-1)
 df_discrepancy["Unders"] = df_discrepancy["Unders"].fillna(0).astype(int)'''
 st.code(positives, language='python')
-st.dataframe(positives)
+st.dataframe(df_discrepancy)
 
 st.write('Now we group by the information obtained')
 df_discrepancy.groupby("Retail_Product_Level1Name").sum()
