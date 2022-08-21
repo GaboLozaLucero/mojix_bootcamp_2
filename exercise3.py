@@ -65,28 +65,17 @@ merging = '''df_discrepancy = pd.merge(df_A, df_B, how="outer", left_on="Retail_
 st.code(merging, language='python')
 st.dataframe(df_discrepancy)
 
-st.write('We can also clean the data to make it more readable')
 df_discrepancy["Retail_SOHQTY"] = df_discrepancy["Retail_SOHQTY"].fillna(0).astype(int)
 df_discrepancy["Diff"] = df_discrepancy["Retail_CCQTY"] - df_discrepancy["Retail_SOHQTY"]
-cleaning = '''df_discrepancy["Retail_SOHQTY"] = df_discrepancy["Retail_SOHQTY"].fillna(0).astype(int)
-df_discrepancy["Diff"] = df_discrepancy["Retail_CCQTY"] - df_discrepancy["Retail_SOHQTY"]'''
-st.code(cleaning, language='python')
-st.dataframe(df_discrepancy)
 
-st.write('Change differences to be positive numbers')
 df_discrepancy.loc[df_discrepancy["Diff"]<0, "Unders"] = df_discrepancy["Diff"] * (-1)
 df_discrepancy["Unders"] = df_discrepancy["Unders"].fillna(0).astype(int)
-positives = '''df_discrepancy.loc[df_discrepancy["Diff"]<0, "Unders"] = df_discrepancy["Diff"] * (-1)
-df_discrepancy["Unders"] = df_discrepancy["Unders"].fillna(0).astype(int)'''
-st.code(positives, language='python')
-st.dataframe(df_discrepancy)
 
-st.write('Now we group by the information obtained')
+st.subheader('Now we check our new info')
+st.write('Product Level 1 Name:')
 df_product_lelve1_name = df_discrepancy.groupby("Retail_Product_Level1Name").sum()
-new_info = '''df_discrepancy.groupby("Retail_Product_Level1Name").sum()'''
-st.code(new_info, language='python')
 st.dataframe(df_product_lelve1_name)
-st.line_chart(df_product_lelve1_name)
+st.bar_chart(df_product_lelve1_name)
 
 
 
