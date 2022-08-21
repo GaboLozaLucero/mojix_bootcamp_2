@@ -14,10 +14,19 @@ df_counted = pd.read_csv("https://storage.googleapis.com/mojix-devops-wildfire-b
 st.code(read, language='python')
 
 st.subheader('Check your data')
-st.write('df expected:')
+st.write('df_expected:')
 df_expected = pd.read_csv("https://storage.googleapis.com/mojix-devops-wildfire-bucket/analytics/bootcamp_2_0/Bootcamp_DataAnalysis_Expected.csv", encoding="latin-1", dtype=str)
 st.dataframe(df_expected)
 
-st.write('df counted')
+st.write('df_counted')
 df_counted = pd.read_csv("https://storage.googleapis.com/mojix-devops-wildfire-bucket/analytics/bootcamp_2_0/Bootcamp_DataAnalysis_Counted.csv", encoding="latin-1", dtype=str)
 st.dataframe(df_counted)
+
+st.subheader('Remove duplicated data')
+df_counted = df_counted.drop_duplicates("RFID")
+df_B = df_counted.groupby("Retail_Product_SKU").count()[["RFID"]].reset_index().rename(columns={"RFID":"Retail_CCQTY"})
+duplicates = '''df_counted = df_counted.drop_duplicates("RFID")
+df_B = df_counted.groupby("Retail_Product_SKU").count()[["RFID"]].reset_index().rename(columns={"RFID":"Retail_CCQTY"})
+df_B.sample(5)'''
+st.code(duplicates, language='python')
+st.dataframe(df_B)
