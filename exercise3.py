@@ -30,7 +30,8 @@ df_B = df_counted.groupby("Retail_Product_SKU").count()[["RFID"]].reset_index().
 st.code(duplicates, language='python')
 st.dataframe(df_B)
 
-st.write('select and show rows by retail info')
+st.subheader('Aggregate info')
+st.write('Select and show rows by retail info')
 rows_selected = ["Retail_Product_Color",
 "Retail_Product_Level1",
 "Retail_Product_Level1Name",
@@ -55,5 +56,12 @@ retail_info = '''rows_selected = ["Retail_Product_Color",
 "Retail_Product_Style",
 "Retail_SOHQTY"]
 df_A = df_expected[rows_selected]'''
-st.code(duplicates, language='python')
+st.code(retail_info, language='python')
 st.dataframe(df_A)
+
+st.subheader('Time to merge')
+df_discrepancy = pd.merge(df_A, df_B, how="outer", left_on="Retail_Product_SKU", right_on="Retail_Product_SKU", indicator=True)
+merging = '''df_discrepancy = pd.merge(df_A, df_B, how="outer", left_on="Retail_Product_SKU", right_on="Retail_Product_SKU", indicator=True)'''
+st.code(merging, language='python')
+st.dataframe(df_discrepancy)
+
