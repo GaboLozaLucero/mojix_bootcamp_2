@@ -77,6 +77,6 @@ st.write('These products need RFID')
 #df_size = df_discrepancy.groupby("Retail_Product_Size").sum()
 #st.bar_chart(df_size.head())
 df_unders = df_discrepancy.groupby(["Unders"]).sum()
-st.dataframe(df_unders);
+st.dataframe(df_unders, width=250);
 
 
