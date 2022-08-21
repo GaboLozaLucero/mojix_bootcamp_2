@@ -77,6 +77,9 @@ st.write('These products need RFID')
 #df_size = df_discrepancy.groupby("Retail_Product_Size").sum()
 #st.bar_chart(df_size.head())
 df_unders = df_discrepancy.groupby(["Diff", "Retail_Product_Name"]).sum()
-st.dataframe(df_unders);
+st.dataframe(df_unders)
+
+need = df_unders.head()
+st.bar_chart(pd.DataFrame(need, columns=["Diff", "Retail_Product_Name"])
 
 
