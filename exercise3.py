@@ -86,6 +86,7 @@ df_product_lelve1_name = df_discrepancy.groupby("Retail_Product_Level1Name").sum
 new_info = '''df_discrepancy.groupby("Retail_Product_Level1Name").sum()'''
 st.code(new_info, language='python')
 st.dataframe(df_product_lelve1_name)
+st.line_chart(df_product_lelve1_name)
 
 
 
