@@ -80,6 +80,6 @@ df_unders = df_discrepancy.groupby(["Diff", "Retail_Product_Name"]).sum()
 st.dataframe(df_unders)
 
 need = df_unders.head()
-st.bar_chart(pd.DataFrame(need, columns=["Diff", "Retail_Product_Name"])
+st.bar_chart(pd.DataFrame(need, columns=["Diff", "Retail_Product_Name"]))
 
 
