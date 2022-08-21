@@ -72,7 +72,7 @@ df_discrepancy.loc[df_discrepancy["Diff"]<0, "Unders"] = df_discrepancy["Diff"] 
 df_discrepancy["Unders"] = df_discrepancy["Unders"].fillna(0).astype(int)
 
 st.subheader('Now we check our new info')
-st.write('These products need RFID')
+st.write('These products need RFID as soon as possible')
 #st.write('Product Level 1 Name:')
 #df_size = df_discrepancy.groupby("Retail_Product_Size").sum()
 #st.bar_chart(df_size.head())
@@ -80,6 +80,7 @@ df_unders = df_discrepancy.groupby(["Diff", "Retail_Product_Name"]).sum()
 #st.dataframe(df_unders)
 
 need = df_unders.head(5)
+need.drop('', inplace=True, axis=1)
 st.dataframe(need)
 #st.bar_chart(pd.DataFrame(need))
 
