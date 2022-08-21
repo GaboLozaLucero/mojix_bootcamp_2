@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(page_title="Gabo Loza Lucero Streamlit", layout="centered")
+st.set_page_config(page_title="Gabo Loza Lucero Streamlit", layout="wide", initial_sidebar_state="collapsed")
 st.title('EXERCISE 3 (Inventory Discrepancy)')
 
 st.write('* Remove dups')
