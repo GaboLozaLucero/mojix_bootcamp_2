@@ -76,7 +76,7 @@ st.write('These products need RFID as soon as possible')
 #st.write('Product Level 1 Name:')
 #df_size = df_discrepancy.groupby("Retail_Product_Size").sum()
 #st.bar_chart(df_size.head())
-df_unders = df_discrepancy.groupby(["Diff", "Retail_Product_Name"]).sum()
+df_unders = df_discrepancy.groupby(["Diff", "Retail_Product_Name"]).sum()[["Unders"]].reset_index().rename(columns={"Unders":"RFID needed"})
 #st.dataframe(df_unders)
 
 need = df_unders.head(5)
